@@ -1,3 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using KataPattern02.Enum;
+using KataPattern02.Facade;
+using KataPattern02.Factory;
 
-Console.WriteLine("Hello, World!");
+string message = "Kafka system is down";
+
+new NotificationFacade(new NotificationFactory()).SendMessage(MessageType.SMS, message);

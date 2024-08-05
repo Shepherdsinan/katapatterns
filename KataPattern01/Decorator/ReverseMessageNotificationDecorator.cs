@@ -4,8 +4,6 @@ namespace DesignPatternKata20240805.Decorator;
 
 internal class ReverseMessageNotificationDecorator(INotification decoratedNotification) : INotification
 {
-    private readonly INotification decoratedNotification = decoratedNotification;
-
     public bool Send(string message)
     {
         string reverseMessage = Reverse(message);
